@@ -5,10 +5,27 @@
             </video>
 
 
-         <video id="film-player" class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9" controls preload="auto" fluid="true" poster="https://i.javre.xyz/media/ucover/46924.jpg" crossorigin="anonymous">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video.js m3u8</title>
+    <link href="css/video-js.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/video.js/4.12.5/video.js"></script>
+    <script src="js/videojs-media-sources.js"></script>
+    <script src="js/videojs.hls.min.js"></script>
+  </head>
+  <body>
 
-<source src="index.m3u8" type="application/x-mpegURL">
-  <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-            </video>
+    <h1>Video.js m3u8 demo page</h1>
+    <video id="test" class="video-js vjs-default-skin" height="300" width="600" controls>
+      <source src="index.m3u8" type="application/x-mpegURL" />
+    </video>
 
+    <script>
+      var player = videojs('test');
+      player.play();
+    </script>
+
+  </body>
+</html>
 
